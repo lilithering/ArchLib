@@ -1,7 +1,7 @@
-const { cerr, cinfo } = require("./../LogManagement/LogManagement");
-const express = require("./../Lib/express");
+const { cerr, cinfo } = require("./../ArchLib/LogManagement");
+const express = require("./../ArchLib/Common/express");
 
-class GAMXGateway {
+class MXGateway {
     constructor() {
         cinfo("Iniciando Gateway");
         if (!this.Create()) return cerr("Falha ao tentar criar a rota");
@@ -20,7 +20,10 @@ class GAMXGateway {
 
         cinfo("Padrões definidos com sucesso");
         return true;
-    }
+    };
+    Static(strURL, strPath) {
+        this.router.use(strURL, express.static(strPath));
+    };
 };
 
-module.exports = { GAMXGateway };
+module.exports = { MXGateway };

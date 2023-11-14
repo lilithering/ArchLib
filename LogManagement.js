@@ -61,20 +61,21 @@ function _log(aStyle, strMessage, mapContent) {
     }
 
     ConsoleOutput(FG_GRAY, `\t${Stack.scriptPath}`, RESET);
-
-    return false;
 };
 
 function cerr(strMessage, mapContent) {
-    return _log(S_ERROR, strMessage, mapContent);
+    _log(S_ERROR, strMessage, mapContent);
+    return false;
 };
 
 function cinfo(strMessage, mapContent) {
-    return _log(S_INFO, strMessage, mapContent);
+    _log(S_INFO, strMessage, mapContent);
+    return true;
 };
 
 function clog(strMessage, mapContent) {
-    return _log(S_LOG, strMessage, mapContent);
+    _log(S_LOG, strMessage, mapContent);
+    return true;
 }
 
 module.exports = { cerr, cinfo, clog };
