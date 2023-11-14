@@ -1,0 +1,15 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Express.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/core": "^1.0.1",
+    "express": "^4.18.2",
+    "mssql": "^10.0.1",
+    "vhost": "^3.0.2"
+  }
+}
