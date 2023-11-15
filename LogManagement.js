@@ -75,7 +75,7 @@ function cinfo(strMessage, mapContent) {
 
 function clog(strMessage, mapContent) {
     _log(S_LOG, strMessage, mapContent);
-    return true;
+    return "";
 }
 
 module.exports = { cerr, cinfo, clog };
