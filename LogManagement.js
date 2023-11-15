@@ -78,4 +78,9 @@ function clog(strMessage, mapContent) {
     return "";
 }
 
-module.exports = { cerr, cinfo, clog };
+function debug(strMessage, mapContent, Echo) {
+    _log([console.log, FG_MAGENTA], strMessage, mapContent);
+    return Echo;
+}
+
+module.exports = { cerr, cinfo, clog, debug };
