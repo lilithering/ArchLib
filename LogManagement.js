@@ -29,12 +29,11 @@ BG_GRAY = "\x1b[100m"
 
 S_INFO = [console.info, FG_WHITE];
 S_ERROR = [console.error, FG_RED];
-S_LOG = [console.error, FG_GREEN];
+S_LOG = [console.log, FG_GREEN];
 
 let m_expStack = /\ *at(.*)(\(.*)/;
 
 console.log(RESET, "LOG MANAGEMENT v3.0\n------------------------------------");
-
 
 function _stack() {
     let aStack = new Error().stack.split('\n');
