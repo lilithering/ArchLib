@@ -63,8 +63,8 @@ function _log(aStyle, strMessage, mapContent) {
 };
 
 function cerr(strMessage, mapContent) {
-    _log(S_ERROR, strMessage, mapContent);
-    return false;
+    _log(S_ERROR, strMessage, mapContent)
+    throw new Error();
 };
 
 function cinfo(strMessage, mapContent) {

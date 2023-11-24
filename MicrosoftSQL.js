@@ -1,8 +1,18 @@
-const mssql = require("./Common/mssql");
+/*****************************
+MicrosoftSQL
+MSSQL CUSTOM API
+Author: Lilithering (lilithering@gmail.com)
+Update: 23-11-23
+[Output] LX::MicrosoftSQL
+******************************/
+
+const mssql = require("./../ArchLib/Common/mssql");
+const { cerr, clog, cinfo, debug } = require("./../ArchLib/LogManagement");
 
 class LXMicrosoftSQL {
     constructor(Options) {
         this.core = mssql;
+        if (!Options) return cerr("Nenhum parâmetro para conexão informado");
         return (async () => {
             this.connection = await mssql.connect(Options);
             return this;
